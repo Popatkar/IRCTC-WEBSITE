@@ -1,0 +1,1207 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  
+}
+
+
+.sidebar{
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #1e1e1e;
+  z-index: 6;
+  transition: all .7s ease;
+  
+}
+.sidebar header{
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.sidebar a{
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+}
+a.active,a:hover{
+  border-left: 5px solid #b93632;
+  color: #b93632;
+}
+.sidebar a i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#check{
+  display: none;
+}
+label #btn1,label #cancel1{
+  position: absolute;
+  cursor: pointer;
+  color: gray !important;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: white;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+  z-index: 1000px;
+}
+label #cancel1{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn1{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel1{
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+@media(max-width : 860px){
+  .sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,#btn1,#cancel1{
+    display: none;
+  }
+  span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a{
+    height: 60px;
+  }
+  .sidebar a i{
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+ .navbar{
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+}
+
+.irctcLogo{
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  /* background-color: aqua; */
+  right: 220px;
+  top: 15px;
+}
+.irctcLogo img{
+  height: 70px;
+  width: 110px;
+}
+.indianRailway{
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  /* background-color: aqua; */
+  right: 90px;
+  top: 15px;
+  transition: .5s ease ;
+}
+
+.indianRailway img {
+  height: 70px;
+  width: 70px;
+}
+
+.vandeBharatImage{
+  background-image: url('images/vande_bharat_images.jpeg');
+  height: 900px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ul
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.vandeBharatImage ul li {
+  list-style: none;
+  font-family: arial;
+  letter-spacing: 7px;
+  text-shadow: none;
+  animation: animate 1s infinite linear;
+}
+
+@keyframes animate
+{
+  0% {
+    color: #FF9933; /* Saffron */
+}
+
+18% {
+    color: #ffffff; /* White */
+}
+
+20% {
+    color: #138808; /* Green */
+    text-shadow: 0 0 7px #228B22, 0 0 20px #0B6623;
+}
+
+    30%
+    {
+        color: #484848;
+        text-shadow: none;
+    }
+
+    35%
+    {
+        color: #484848;
+        text-shadow: 0 0 #539dbf , 0 0 20px #077b88;
+    }
+
+    70%
+    {
+        color: #484848;
+        text-shadow: none;
+    }
+
+    85%
+    {
+        color: #484848;
+        text-shadow: 0 0 7px #539dbf , 0 0 20px #077b88;
+    }
+
+    90%
+    {
+        color: #484848;
+        text-shadow: none;
+    }
+
+    100%
+    {
+        color: #484848;
+        text-shadow: none;
+    }
+}
+ul li:nth-child(1)
+{
+    animation-delay: .2s;
+}
+
+ul li:nth-child(2)
+{
+    animation-delay: .4s;
+}
+
+ul li:nth-child(3)
+{
+    animation-delay: .6s;
+}
+
+ul li:nth-child(4)
+{
+    animation-delay: .8s;
+}
+
+ul li:nth-child(5)
+{
+    animation-delay: .1s;
+}
+
+ul li:nth-child(6)
+{
+    animation-delay: 1.2s;
+    letter-spacing: 20px;
+}
+
+ul li:nth-child(7)
+{
+    animation-delay: 1.4s;
+}
+
+ul li:nth-child(8)
+{
+    animation-delay: 1.6s;
+}
+
+ul li:nth-child(9)
+{
+    animation-delay: 1.8s;
+}
+
+ul li:nth-child(10)
+{
+    animation-delay: 2.0s;
+}
+
+ul li:nth-child(11)
+{
+    animation-delay: 2.2s;
+}
+
+ul li:nth-child(12)
+{
+    animation-delay: 2.4s;
+}
+
+ul li:nth-child(13)
+{
+    animation-delay: 2.6s;
+}
+
+ul li:nth-child(14)
+{
+    animation-delay: 2.8s;
+}
+
+.vandeBharatImage h2 {
+  position: absolute;
+  top: 140px;
+  letter-spacing: 4px;
+  left: 300px;
+  transform: translate(-50%, -50%);
+  color: #1b1b1b; /* Add a color to make the text visible on the image */
+  font-size: 45px;
+}
+
+.vandeBharatImage h4 {
+  position: absolute;
+  top: 200px;
+  letter-spacing: 4px;
+  left: 300px;
+  transform: translate(-50%, -50%);
+  color: #1b1b1b; /* Add a color to make the text visible on the image */
+  font-size: 23px;
+}
+
+.bag {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc; /* Adjust the background color of the bag */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bag i {
+  color: whie; /* Adjust the color of the tick mark */
+  font-size: 24px; /* Adjust the size of the tick mark */
+}
+
+
+.pnr_status{
+  padding: 5px;
+  padding-top: 5px;
+  width: 235px;
+  height: 35px;
+  background-color: blue;
+  position: absolute;
+  top: 160px;
+  left: 650px;
+}
+.pnr_text{  
+  top: 15px;
+  left: 80px;
+  position: absolute;
+}
+
+.pnr_status h3{
+  color: whitesmoke;
+  text-align: center;
+  padding: -50px;
+  top: 600px;
+}
+
+
+
+.charts_vaccancy{
+  padding: 5px;
+  padding-top: 5px;
+  width: 235px;
+  height: 35px;
+  background-color: blue;
+  position: absolute;
+  top: 160px;
+  margin-left: 50px;
+}
+.inner_charts_vaccancy{  
+  top: 15px;
+  left: 80px;
+  position: absolute;
+}
+
+.inner_charts_vaccancy h3{
+  color: whitesmoke;
+  text-align: center;
+  padding: -50px;
+  top: 600px;
+}
+
+
+
+
+
+
+
+.charts_vaccancy{
+  padding: 5px;
+  padding-top: 5px;
+  width: 250px;
+  height: 35px;
+  background-color: blue;
+  position: absolute;
+  top: 160px;
+  left: 870px;
+}
+ .inner_charts_vaccancy{
+  color: whitesmoke;
+  text-align: center;
+  padding: -100px;
+  top: 600px;
+  
+}
+.inner_charts_vaccancy h3{
+  color: whitesmoke;
+  text-align: center;
+  /* padding: -50px; */
+  top: -585px;
+  left: -30px;
+  position: absolute;
+}
+
+.form{
+  background-color: white;
+  position: absolute;
+  height: 570px;
+  width: 530px;
+  left: 650px;
+  top: 206px;
+}
+
+.azaadi_ka_mahotsav{
+  position: absolute;
+  height: 90px;
+  width: 144px;
+  left: 10px;
+  background-color: white;
+  background-image: url('images/Azaadi_ka_mahotsav.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: blue; */
+
+}
+.Book_tkt{
+  position: absolute;
+  height: 90px;
+  width: 183px;
+  /* background-color: red; */
+  background-color: white;
+  left: 165px;
+}
+.Book_tkt p{
+  font-size: 27px;
+  padding-top: 30px;
+}
+
+.g20{
+  position: absolute;
+  height: 90px;
+  width: 150px;
+  background-color: white;
+  left: 360px;
+  background-image: url('images/G20.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: blue; */
+}
+.final_form{
+  position: absolute;
+  height: 480px;
+  width: 530px;
+  top: 90px;
+  /* background-color: #ccc; */
+}
+
+
+
+
+
+
+
+
+
+.final_form form {
+  max-width: 600px;
+  margin: 2px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.final_form label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.final_form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.checkbox-group {
+  margin-bottom: 12px;
+}
+
+.checkbox-group label {
+  display: block;
+}
+
+.final_form button {
+  padding: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 92px;
+}
+
+.final_form .search-btn {
+  background-color: orange;
+}
+
+.try-booking-btn {
+  background-color: green;
+}
+
+.icon_Section {
+    padding: 0px 10px;
+    text-align: center;
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    /* background-color: gray; */
+    
+}
+.icons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.icon_Section h2 {
+  margin-top: 55px;
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-family: Body, Quicksand, sans-serif !important;
+}
+
+.icons1{
+  position: absolute;
+  height: 200px;
+  width: 1000px;
+  /* background-color: red; */
+
+  display: flex;
+}
+
+.icons2{
+  position: absolute;
+  height: 200px;
+  width: 1000px;
+  top: 370px;
+  /* background-color: blue; */
+  display: flex;
+}
+
+
+
+ .flight, .hotels, .rail_drishti, .e-catering, .bus, .holiday_packages, .tourist_train, .hill_railways, .charter_train, .gallery{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 50px;
+  border: 2px solid black;
+  /* background-color: white; */
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.flight{
+  background: url('images/Icons/flight1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease;
+  display: inline-block;
+}
+
+.flight:hover{
+  transform: scale(1.2); 
+}
+
+.flight_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.hotels{
+  background: url('images/Icons/hotels1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.hotels:hover{
+  transform: scale(1.2); 
+}
+
+.hotels_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.rail_drishti{
+  background: url('images/Icons/rail_drishti1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.rail_drishti:hover{
+  transform: scale(1.2); 
+}
+
+.rail_drishti_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.e-catering{
+  background: url('images/Icons/e-catering1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.e-catering:hover{
+  transform: scale(1.2); 
+}
+
+.e-catering-both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.bus{
+  background: url('images/Icons/bus1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.bus:hover{
+  transform: scale(1.2); 
+}
+
+.bus_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.holiday_packages{
+  background: url('images/Icons/holiday_packages.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.holiday_packages:hover{
+  transform: scale(1.2); 
+}
+
+.holiday_packages_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.tourist_train{
+  background: url('images/Icons/tourist_train1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.tourist_train:hover{
+  transform: scale(1.2); 
+}
+
+.tourist_train_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.hill_railways{
+  background: url('images/Icons/hill_railways1.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.hill_railways:hover{
+  transform: scale(1.2); 
+}
+
+.hill_railways_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.charter_train{
+  background: url('images/Icons/charter_train12.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.charter_train:hover{
+  transform: scale(1.2); 
+}
+
+.charter_train-both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.gallery{
+  background: url('images/Icons/gallery1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+
+.gallery:hover{
+  transform: scale(1.2); 
+}
+
+.gallery_both label{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: larger;
+}
+
+.holidays{
+  position: absolute;
+  height: 1500px;
+  width: 1180px;
+  /* background-color: red; */
+  top: 1510px;
+  left: 30px;
+}
+
+.section{
+  position: absolute;
+  /* left: 100px; */
+  margin-right: 200px;
+  height: 100px;
+  width: 1100px;
+  /* background-color: red; */
+  right: -75px;
+}
+
+@keyframes animate1
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(180deg);
+  }
+}
+
+.holidays h1{
+  font-size: 50px;
+  padding-left: 500px;
+  padding-top: 25px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.maharajas_express{
+  position: absolute;
+  height: 630px;
+  width: 320px;
+  background-color: whitesmoke;
+  left: 40px;
+  top: 120px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+.maharajas_express:hover {
+  transform: scale(1.1); 
+}
+
+.maharajas_express a{
+  text-decoration: none; 
+  color: black; 
+  font-weight: bold; 
+  font-size: 20px;
+  
+}
+
+.maharajas_express .img1{
+  position: absolute;
+  height: 300px;
+  width: 320px;
+  /* background-color: green; */
+  background-image: url('images/Holidays/Maharajas_express.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.maharajas_express h2{
+  margin-top: 310px;
+  margin-left: 50px;
+}
+
+.maharajas_express p{
+  font-size: 19px;
+  line-height: 1.1;
+  text-align: justify;
+  padding: 0 2px;
+  margin: 0 7px;
+}
+
+.International_Packages{
+  position: absolute;
+  height: 630px;
+  width: 320px;
+  background-color: whitesmoke;
+  left: 430px;
+  top: 120px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+.International_Packages:hover {
+  transform: scale(1.1); 
+}
+
+.International_Packages a{
+  text-decoration: none; /* Remove default underline for links */
+  color: black; /* Set link color to your preference */
+  font-weight: bold; /* Make the link text bold */
+  font-size: 20px;
+  
+}
+
+.International_Packages .img2{
+  position: absolute;
+  height: 300px;
+  width: 320px;
+  /* background-color: green; */
+  background-image: url('images/Holidays/international_packages.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.International_Packages h2{
+  margin-top: 310px;
+  margin-left: 50px;
+}
+
+.International_Packages p{
+  font-size: 19px;
+  line-height: 1.2;
+  text-align: justify;
+  padding: 0 2px;
+  margin: 0 7px;
+}
+
+.Domestic_Air_Packages{
+  position: absolute;
+  height: 630px;
+  width: 320px;
+  background-color: whitesmoke;
+  left: 820px;
+  top: 120px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+.Domestic_Air_Packages:hover {
+  transform: scale(1.1); 
+}
+
+.Domestic_Air_Packages a{
+  text-decoration: none; /* Remove default underline for links */
+  color: black; /* Set link color to your preference */
+  font-weight: bold; /* Make the link text bold */
+  font-size: 20px;
+  
+}
+
+.Domestic_Air_Packages .img3{
+  position: absolute;
+  height: 300px;
+  width: 320px;
+  /* background-color: green; */
+  background-image: url('images/Holidays/domestic_air_packages.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Domestic_Air_Packages h2{
+  margin-top: 310px;
+  margin-left: 50px;
+}
+
+.Domestic_Air_Packages p{
+  font-size: 19px;
+  line-height: 1.2;
+  text-align: justify;
+  padding: 0 2px;
+  margin: 0 7px;
+}
+
+.Bharat_Gaurav_Tourist_Train{
+  position: absolute;
+  height: 630px;
+  width: 320px;
+  background-color: whitesmoke;
+  left: 40px;
+  top: 810px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+.Bharat_Gaurav_Tourist_Train:hover {
+  transform: scale(1.1); 
+}
+
+.Bharat_Gaurav_Tourist_Train a{
+  text-decoration: none; /* Remove default underline for links */
+  color: black; /* Set link color to your preference */
+  font-weight: bold; /* Make the link text bold */
+  font-size: 20px;
+  
+}
+
+.Bharat_Gaurav_Tourist_Train .img4{
+  position: absolute;
+  height: 300px;
+  width: 320px;
+  /* background-color: green; */
+  background-image: url('images/Holidays/Bharat_Gaurav_tourist_train.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Bharat_Gaurav_Tourist_Train h2{
+  margin-top: 310px;
+  margin-left: 50px;
+}
+
+.Bharat_Gaurav_Tourist_Train p{
+  font-size: 19px;
+  line-height: 1.2;
+  text-align: justify;
+  padding: 0 2px;
+  margin: 0 7px;
+}
+
+.Rail_Tour_Packages{
+  position: absolute;
+  height: 630px;
+  width: 320px;
+  background-color: whitesmoke;
+  left: 430px;
+  top: 810px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+.Rail_Tour_Packages:hover {
+  transform: scale(1.1); 
+}
+
+.Rail_Tour_Packages a{
+  text-decoration: none; /* Remove default underline for links */
+  color: black; /* Set link color to your preference */
+  font-weight: bold; /* Make the link text bold */
+  font-size: 20px;
+  
+}
+
+.Rail_Tour_Packages .img5{
+  position: absolute;
+  height: 300px;
+  width: 320px;
+  /* background-color: green; */
+  background-image: url('images/Holidays/rail_tour_packages.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Rail_Tour_Packages h2{
+  margin-top: 310px;
+  margin-left: 50px;
+}
+
+.Rail_Tour_Packages p{
+  font-size: 19px;
+  line-height: 1.1;
+  text-align: justify;
+  padding: 0 2px;
+  margin: 0 7px;
+}
+
+.socialmedia{
+  position: absolute;
+  width: 98%;
+  height: auto;
+  background-color: red;
+  top: 2970px;
+  margin-left: 10px;
+}
+
+.pointer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  /* background: rgba(255, 255, 255, .1); */
+  /* background: rgb(54, 51, 51,0.1); */
+  border: 1px solid black ;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  /* animation: animate 0.2s linear infinite; */
+  transition: 0.2s;   
+}
+
+.pointer1
+{
+  transition: 0.05s;
+}
+.pointer2
+{
+  transition: 0.1s;
+}
+.pointer3
+{
+  transition: 0.15s;
+}
+.pointer4
+{
+  transition: 0.2s;
+}
+.pointer5
+{
+  transition: 0.25s;
+} 
+
+.container{
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul{
+  list-style: none;
+}
+
+.social_media{
+  position: absolute;
+  top: 3000px;
+  height: 100px;
+  width: 100%;
+  background-color: rgba(220, 237, 217, 0.1);
+  text-decoration: none;
+}
+
+.social_media h3{
+  /* text-align: left; */
+  padding-top: 40px;
+  padding-left: 200px;
+
+}
+
+.facebook1{
+  position: absolute;
+  top: 25px;
+  border-radius: 50%;
+  /* background-color: blue; */
+  height: 60px;
+  width: 60px;
+  left: 580px;
+}
+
+.facebook1 img{
+  height: 40px;
+  width: 40px;
+}
+
+.youtube1{
+  position: absolute;
+  top: 25px;
+  border-radius: 50%;
+  /* background-color: blue; */
+  height: 60px;
+  width: 60px;
+  left: 642px;
+}
+
+.youtube1 img{
+  height: 40px;
+  width: 40px;
+}
+
+.instagram1{
+  position: absolute;
+  top: 25px;
+  border-radius: 50%;
+  /* background-color: blue; */
+  height: 60px;
+  width: 60px;
+  left: 704px;
+}
+
+.instagram1 img{
+  height: 40px;
+  width: 40px;
+}
+
+.linkedin1{
+  position: absolute;
+  top: 25px;
+  border-radius: 50%;
+  /* background-color: blue; */
+  height: 60px;
+  width: 60px;
+  left: 766px;
+}
+
+.linkedin1 img{
+  height: 40px;
+  width: 40px;
+}
+
+.twitter1{
+  position: absolute;
+  top: 25px;
+  border-radius: 50%;
+  /* background-color: blue; */
+  height: 60px;
+  width: 60px;
+  left: 828px;
+}
+
+.twitter1 img{
+  height: 40px;
+  width: 40px;
+}
+
+.footer123{
+  position: absolute;
+  top: 3100px;
+  height: 80px;
+  width: 100%;
+  /* background-color: red; */
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer a {
+  color: #b93632; /* Adjust the link color */
+  text-decoration: none;
+  font-weight: 230px;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  color: #ff6347; /* Adjust the link color on hover */
+}
